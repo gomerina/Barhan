@@ -66,6 +66,10 @@ main {
     padding: 127px 0 0 0;
 }
 
+.index-main {
+    padding: 0;
+}
+
 .index-header {
     padding: 37px 0;
     position: relative;
@@ -638,6 +642,10 @@ main {
     width: 143px;
     margin: 0 11px 0 0;
     flex-shrink: 0;
+
+    & .swiper-pagination {
+        display: none;
+    }
 }
 
 .big-card__slider {
@@ -647,13 +655,17 @@ main {
 }
 
 .big-slider__item img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
 }
 
 .big-slider {
     width: 425px;
     flex-shrink: 0;
+
+    & .swiper-pagination {
+        display: none;
+    }
 }
 
 .vertical__slider-item {
@@ -852,6 +864,7 @@ main {
 
 .tabs__content.active {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     margin: 31px auto 0 auto;
     font-size: 14px;
@@ -873,7 +886,12 @@ main {
 .tabs__img-box {
     padding: 20px 23px;
     border: 1px solid #000000;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .tabs {
@@ -936,6 +954,7 @@ main {
     align-items: center;
     min-height: 337px;
     background: url(../img/about-bg.jpg) no-repeat;
+    background-size: 100% 100%;
     font-family: 'Syncopate', sans-serif;
     font-weight: 700;
     font-size: 50px;
@@ -963,7 +982,6 @@ main {
 .about__text {
     font-size: 25px;
     line-height: 30.5px;
-    margin: 0 0 220px 0;
 }
 
 .about__descr:not(:last-child) {
@@ -997,8 +1015,15 @@ main {
     justify-content: space-between;
 }
 
+.basket-items__box {
+    max-width: 630px;
+    width: 100%;
+    padding: 0 30px 0 0;
+}
+
 .basket__item {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     padding: 17px 0;
@@ -1009,18 +1034,18 @@ main {
 
     &:before {
         content: '';
-        width: 2000px;
+        width: 100%;
         height: 1px;
         background: #635E5E;
         position: absolute;
-        left: -1253px;
+        left: 0px;
         top: 0;
     }
 }
 
 .basket__img {
-    max-height: 137px;
-    max-width: 103px;
+    height: 137px;
+    width: 103px;
     margin: 0 50px 0 0;
 
     & img {
@@ -1036,7 +1061,6 @@ main {
 
 .basket__item-info {
     font-size: 10px;
-    margin: 0 109px 0 0;
 }
 
 .id-value {
@@ -1105,7 +1129,8 @@ main {
 }
 
 .basket__sidebar {
-    width: 28.561%;
+    width: 381px;
+    flex-shrink: 0;
     margin: -40px 0 0 0;
     padding: 25px;
     position: relative;
@@ -1191,7 +1216,6 @@ main {
     font-weight: 400;
 }
 
-.reg-form__item p {}
 
 .form-input {
     padding: 10px 15px;
@@ -1223,6 +1247,10 @@ main {
     h6 {
         font-size: 24px;
         line-height: 30px;
+    }
+
+    .header__right-item:not(:last-child) {
+        margin: 0 10px 0 0;
     }
 
     .footer__inner {
@@ -1265,10 +1293,51 @@ main {
     .big-card__buttons {
         grid-template-columns: 4fr;
     }
+
+    .vertical__slider {
+        display: none;
+    }
+
+    .big-slider {
+        padding: 0 0 40px 0;
+
+        & .swiper-pagination {
+            display: block;
+        }
+
+        & .swiper-pagination-bullet {
+            width: 33px;
+            height: 3px;
+            background: #000000;
+            border-radius: 2px;
+        }
+    }
+
+    .tabs__caption span:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+
+    // Корзина
+    .basket__item-left {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .basket__img {
+        margin: 0 0 15px 0;
+    }
+
+    .basket__sidebar {
+        width: 280px;
+    }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
     .container {
+        padding: 0 17px;
+    }
+
+    .about__inner {
         padding: 0 17px;
     }
 
@@ -1410,9 +1479,7 @@ main {
         gap: 10px;
     }
 
-    .header__right-item:not(:last-child) {
-        margin: 0 10px 0 0;
-    }
+
 
     .mobile-search {
         display: inline-block;
@@ -1600,7 +1667,7 @@ main {
 
     // слайдер
     .product-cards__body {
-        padding: 0 0 30px 0;
+        padding: 0 0 42px 0;
 
         & .swiper-button-next,
         .swiper-button-prev {
@@ -1615,6 +1682,109 @@ main {
         & .swiper-pagination-bullet-active {
             background: #000000;
         }
+    }
+
+    .product-card__img {
+        align-items: center;
+    }
+
+    // большая карточка
+    .big-card__textblock {
+        max-width: 100%;
+    }
+
+    .big-card__box {
+        flex-direction: column;
+    }
+
+    .big-card__slider {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .big-slider {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .big-card__info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .big-card__articuls {
+        text-align: left;
+        margin: 0 0 40px 0;
+    }
+
+    .big-card__buttons {
+        margin: 0 0 30px 0;
+    }
+
+    .tabs__caption-inner {
+        flex-wrap: nowrap;
+    }
+
+    .tabs__caption {
+        white-space: nowrap;
+        overflow: auto;
+        padding: 0 0 10px 0;
+        margin: 0 17px 0 0;
+        border: none;
+    }
+
+    .tabs__inner,
+    .tabs__caption-inner,
+    .tabs__content {
+        padding: 0 17px;
+    }
+
+    .tabs__img-box {
+        padding: 7px;
+    }
+
+    .product-cards__head--bc,
+    .product-cards__head--watch,
+    .product-cards__head--basket {
+        margin: 0 0 25px 0;
+    }
+
+    // О нас 
+    .about__body {
+        min-height: 250px;
+        margin: 0 0 30px 0;
+    }
+
+    .about__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    // Корзина
+    .basket-body__inner {
+        display: grid;
+        grid-template-columns: 4fr;
+    }
+
+    .basket-aside__head {
+        display: none;
+    }
+
+    .basket__sidebar {
+        width: 100%;
+        padding: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .basket-items__box {
+        max-width: 100%;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    .basket-body {
+        margin: 0 0 30px 0;
+        padding: 0;
     }
 }
 
@@ -1652,9 +1822,20 @@ main {
     .popular__item-img {
         height: 280px;
     }
+
+    // Большая карточка
+
+    .big-slider {
+        height: 400px;
+    }
+
+    .about__body {
+        font-size: 28px;
+        min-height: 200px;
+    }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 419px) {
     .main-menu__item.women {
         background: url(../img/women-mobile.jpg) no-repeat;
         background-size: 100% 100%;
@@ -1675,5 +1856,49 @@ main {
 
     .popular__item-img {
         height: 240px;
+    }
+
+    // корзина 
+    .basket__item {
+        flex-direction: column;
+    }
+
+    .basket__item-left {
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .basket__item-right {
+        justify-content: space-between;
+    }
+
+    .basket__item-info {
+        margin: 0 0 15px 0;
+    }
+
+    .basket-price {
+        width: 103px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .basket-buttons__box {
+        display: block;
+    }
+
+    .basket-setting__button {
+        display: block;
+
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .basket__img {
+        margin: 0 25px 15px 0;
+    }
+
+    .basket-buttons__box {
+        margin: 0;
     }
 }

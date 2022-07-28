@@ -1,10 +1,15 @@
 // Слайдер в большой карточке
+// Вертикальный
 var verticalSlider = new Swiper(".vertical__slider", {
     spaceBetween: 10,
     slidesPerView: 3,
     watchSlidesProgress: true,
     direction: "vertical",
+    pagination: {
+        el: ".swiper-pagination",
+    },
 });
+// Горизонтальный
 var bigSlider = new Swiper(".big-slider", {
     spaceBetween: 0,
     navigation: {
@@ -13,6 +18,10 @@ var bigSlider = new Swiper(".big-slider", {
     },
     thumbs: {
         swiper: verticalSlider,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
 });
 // Слайдеры карточек товара в секции по 5шт
@@ -30,6 +39,7 @@ sliders.forEach(function (el) {
         },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
         breakpoints: {
             280: {
@@ -69,6 +79,7 @@ sliders4.forEach(function (el) {
         },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
         breakpoints: {
             280: {
