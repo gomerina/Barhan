@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header class="header main-header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-inner">
+                <nav class="header__top-nav">
+                    <a href="#" class="header__top-link current">women</a>
+                    <a href="#" class="header__top-link">men</a>
+                </nav>
+                <div class="header__mobile-left">
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mobile-search">
+                        <img src="img/svg/mobile-search.svg" alt="">
+                    </div>
+                </div>
+                <div class="header__logo">
+                    <a href="index.html">
+                        BARHAN
+                    </a>
+                </div>
+                <div class="header__right">
+                    <div class="header__right-item search">
+                        <img src="img/svg/search.svg" alt="" class="search__desctope-img">
+                    </div>
+                    <a href="#" class="header__right-item user">
+                        <img src="img/svg/user.svg" alt="" class="user-img">
+                    </a>
+                    <a href="#" class="header__right-item">
+                        <img src="img/svg/favorite.svg" alt="" class="favorite__desctope-img">
+                        <img src="img/svg/favorite-mobile.svg" alt="" class="favorite__mobile-img">
+                    </a>
+                    <a href="#" class="header__right-item basket">
+                        <img src="img/svg/basket.svg" alt="" class="basket__desctope-img">
+                        <img src="img/svg/basket-mobile.svg" alt="" class="basket__mobile-img">
+                        <!--<div class="basket__info">
+                            <div class="basket__info-name">1 товаров</div>
+                            <div class="basket__info-sum">66 793 руб.</div>
+                        </div>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="header__bottom">
+        <div class="container">
+            <div class="header__bottom-nav">
+                <a href="#" class="header__bottom-link">новинки</a>
+                <a href="#" class="header__bottom-link">дизайнеры</a>
+                <a href="#" class="header__bottom-link">одежда</a>
+                <a href="#" class="header__bottom-link">обувь</a>
+                <a href="#" class="header__bottom-link">сумки</a>
+                <a href="#" class="header__bottom-link">аксессуары</a>
+            </div>
+        </div>
+    </nav>
+    <div class="header__bottom-mobile">
+        <a href="#" class="current">Для нее</a>
+        <a href="#">Для него</a>
+    </div>
+    <div class="search__box">
+        <div class="container">
+            <div class="search-form__box">
+                <form action="#">
+                    <input type="text" class="search-input" name="search" placeholder="Поиск">
+                    <button class="search-button"></button>
+                </form>
+            </div>
+            <div class="alphabet">
+                <span class="alphabet__item current">a</span>
+                <span class="alphabet__item">b</span>
+                <span class="alphabet__item">c</span>
+                <span class="alphabet__item">d</span>
+                <span class="alphabet__item">e</span>
+                <span class="alphabet__item">f</span>
+                <span class="alphabet__item">g</span>
+                <span class="alphabet__item">h</span>
+                <span class="alphabet__item">i</span>
+                <span class="alphabet__item">j</span>
+                <span class="alphabet__item">k</span>
+                <span class="alphabet__item">l</span>
+                <span class="alphabet__item">m</span>
+                <span class="alphabet__item">n</span>
+                <span class="alphabet__item">o</span>
+                <span class="alphabet__item">p</span>
+                <span class="alphabet__item">q</span>
+                <span class="alphabet__item">r</span>
+                <span class="alphabet__item">s</span>
+                <span class="alphabet__item">t</span>
+                <span class="alphabet__item">u</span>
+                <span class="alphabet__item">v</span>
+                <span class="alphabet__item">w</span>
+                <span class="alphabet__item">x</span>
+                <span class="alphabet__item">y</span>
+                <span class="alphabet__item">z</span>
+            </div>
+            <ul class="search__result">
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Acne Studios</a>
+                </li>
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Adidas</a>
+                </li>
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Agent Provocateur</a>
+                </li>
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Aizel</a>
+                </li>
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Alanui</a>
+                </li>
+                <li class="search__result-item">
+                    <a href="#" class="search__result-link">Alessandra Rich</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>    <main>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="#" class="breadcrumb__link">Главная</a>
+                <a href="#" class="breadcrumb__link">Женское</a>
+                <a href="#" class="breadcrumb__link current">Одежда</a>
+            </nav>
+            <div class="heading catalog-heading">
+                <h5>Одежда</h5>
+                <div class="products-value">
+                    <span>137</span>
+                    <span>Товаров</span>
+                </div>
+            </div>
+            <div class="sort-select__box">
+                <div class="custom-select sort-select">
+                    <span class="custom-select__value sort-select__value">Сортировать по</span>
+                    <input type="hidden" class="custom-select__input">
+                    <ul class="select-menu sort__select-menu">
+                        <li class="select-menu__item hidden">Sort 1</li>
+                        <li class="select-menu__item">Sort 2</li>
+                        <li class="select-menu__item">Sort 3</li>
+                        <li class="select-menu__item">Sort 4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="catalog__inner">
+                <div class="filter-mobile">
+                    <div class="filter-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="filter-text">Фильтры</span>
+                </div>
+                <aside class="filter">
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Одежда</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Футболки</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Брюки</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Деним</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Жакеты</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Комбинезоны</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Костюмы</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Куртки</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Пальто</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Платья</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Толстовки</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Трикотаж</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Шорты</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Юбки</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Кожа</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Повседневная одежда</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Вечерняя одежда</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Обувь</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Обувь 1</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Обувь 2</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Обувь 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Сумки</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Сумка 1</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Сумка 2</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Сумка 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Аксессуары</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Аксессуар 1</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Аксессуар 2</a>
+                            </li>
+                            <li class="filter-menu__item">
+                                <a href="#" class="filter-menu__link">Аксессуар 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Дизайнеры</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Дизайнер 1
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Дизайнер 2
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Дизайнер 3
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Новинки</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Да
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Размеры</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Размер 1
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Размер 2
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Размер 3
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__item">
+                        <div class="filter__item-heading">Цвет</div>
+                        <ul class="filter-menu">
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Цвет 1
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Цвет 2
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                            <li class="filter-menu__item menu__checkbox">
+                                <span class="control control-checkbox">
+                                    Цвет 3
+                                    <input type="checkbox" />
+                                    <span class="control_indicator"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="catalog__cards">
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-1.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Jil Sander</h6>
+                            </div>
+                            <p class="product-card__name">Хлопковая футболка с логотипом</p>
+                            <p class="product-card__price">18 900</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-2.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Balenciaga</h6>
+                            </div>
+                            <p class="product-card__name">Черная футболка</p>
+                            <p class="product-card__price">59 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-3.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Paco Rabanne</h6>
+                            </div>
+                            <p class="product-card__name">Разноцветная футболка</p>
+                            <p class="product-card__price">25 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-4.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Joshua's X Smiley</h6>
+                            </div>
+                            <p class="product-card__name">Лиловая футболка с принтом</p>
+                            <p class="product-card__price">7 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-5.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Gucci</h6>
+                            </div>
+                            <p class="product-card__name">Белая футболка с логотипом</p>
+                            <p class="product-card__price">79 600</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-3.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Balenciaga</h6>
+                            </div>
+                            <p class="product-card__name">Белая футболка The Simpsons</p>
+                            <p class="product-card__price">49 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-1.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Jil Sander</h6>
+                            </div>
+                            <p class="product-card__name">Хлопковая футболка с логотипом</p>
+                            <p class="product-card__price">18 900</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-2.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Balenciaga</h6>
+                            </div>
+                            <p class="product-card__name">Черная футболка</p>
+                            <p class="product-card__price">59 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-3.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Paco Rabanne</h6>
+                            </div>
+                            <p class="product-card__name">Разноцветная футболка</p>
+                            <p class="product-card__price">25 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-4.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Joshua's X Smiley</h6>
+                            </div>
+                            <p class="product-card__name">Лиловая футболка с принтом</p>
+                            <p class="product-card__price">7 000</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-5.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Gucci</h6>
+                            </div>
+                            <p class="product-card__name">Белая футболка с логотипом</p>
+                            <p class="product-card__price">79 600</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card__item hidden">
+                        <div class="product-card__favorite"></div>
+                        <div class="product-card__img">
+                            <img src="img/catalog-3.jpg" alt="">
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__brand">
+                                <h6>Balenciaga</h6>
+                            </div>
+                            <p class="product-card__name">Белая футболка The Simpsons</p>
+                            <p class="product-card__price">49 000</p>
+                        </div>
+                    </a>
+                    <button class="catalog__more-button">показать еще</button>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__item">
+            <div class="footer__item-head">barhan*</div>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">о магазине</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">бренды</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <div class="footer__item-head">помощь</div>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">Связаться с нами</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">оплата</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">доставка</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">обмен и возврат</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <div class="footer__item-head">правовая информация</div>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">оферта</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="footer-menu__link">Политика обработки
+                        персональных данных</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <div class="footer__item-head">связаться с нами</div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link">
+                    <img src="img/svg/vk-icon.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link">
+                    <img src="img/svg/tg-icon.svg" alt="">
+                </a>
+                <a href="#" class="footer__social-link">
+                    <img src="img/svg/whatsapp-icon.svg" alt="">
+                </a>
+            </div>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <a href="tel:+79851963393" class="footer-menu__link">+7 985 196 33 93</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="mailto:info@barhan.store" class="footer-menu__link">info@barhan.store</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>    <div class="overlay"></div>
+    <script src="js/swiper.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

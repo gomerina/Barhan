@@ -31,7 +31,7 @@ sliders.forEach(function (el) {
         loop: false,
         slidesPerGroup: 5,
         slidesPerView: 5,
-        spaceBetween: 45,
+        spaceBetween: 50,
         speed: 800,
         navigation: {
             nextEl: el.querySelector('.swiper-button-next'),
@@ -49,12 +49,12 @@ sliders.forEach(function (el) {
             },
             640: {
                 slidesPerView: 3,
-                slidesPerGroup: 2,
+                slidesPerGroup: 3,
                 spaceBetween: 20,
             },
             768: {
                 slidesPerView: 3,
-                slidesPerGroup: 4,
+                slidesPerGroup: 3,
                 spaceBetween: 40,
             },
             1024: {
@@ -67,7 +67,7 @@ sliders.forEach(function (el) {
 // Слайдеры карточек товара в секции по 4шт
 const sliders4 = document.querySelectorAll('.slides-4');
 sliders4.forEach(function (el) {
-    const swiper = new Swiper(el, {
+    const swiper4 = new Swiper(el, {
         loop: false,
         slidesPerGroup: 4,
         slidesPerView: 4,
@@ -89,12 +89,12 @@ sliders4.forEach(function (el) {
             },
             640: {
                 slidesPerView: 3,
-                slidesPerGroup: 2,
+                slidesPerGroup: 3,
                 spaceBetween: 20,
             },
             768: {
                 slidesPerView: 3,
-                slidesPerGroup: 4,
+                slidesPerGroup: 3,
                 spaceBetween: 40,
             },
             1024: {
@@ -104,7 +104,43 @@ sliders4.forEach(function (el) {
         }
     });
 });
-
+// Слайдер дополнить образ 
+var fashionSlider = new Swiper(".fashion-slider", {
+    loop: false,
+    slidesPerGroup: 3,
+    slidesPerView: 3,
+    spaceBetween: 45,
+    speed: 800,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        280: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    }
+});
 // Селект
 document.addEventListener('click', function () {
     $('.custom-select').removeClass('active');
@@ -137,7 +173,7 @@ $('.custom-select').each(function () {
 
 $('.footer__item-head').each(function () {
     $(this).click(function () {
-        if (window.innerWidth <= 769) {
+        if (window.innerWidth <= 1023) {
             $(this).closest('.footer__item').find($('.footer-menu')).slideToggle();
             $(this).closest('.footer__item').find($('.footer__social')).slideToggle();
         }
@@ -151,5 +187,52 @@ $('.burger').click(function () {
 })
 $('.overlay').click(function () {
     $('.header__bottom-nav').removeClass('active');
+    $('.filter').removeClass('active');
     $(this).removeClass('active');
 })
+// Поиск
+
+$('.search').click(function () {
+    $('.search__box').toggleClass('active');
+})
+$('.mobile-search').click(function () {
+    $('.search__box').toggleClass('active');
+})
+$('.alphabet__item').click(function () {
+    $(this).addClass('current').siblings().removeClass('current');
+})
+$('.close-search').click(function () {
+    $('.search__box').removeClass('active');
+})
+// Фильтр
+
+$('.filter__item').each(function () {
+    $(this).find('.filter__item-heading').click(function () {
+        $(this).next('.filter-menu').toggleClass('active');
+        $(this).toggleClass('active');
+    })
+})
+$('.filter-mobile').click(function () {
+    $('.filter').addClass('active');
+    $('.overlay').addClass('active');
+})
+// Кнопка показать ещё
+$('.catalog__more-button').click(function () {
+    $('.product-card__item').removeClass('hidden')
+})
+
+// Способы доставки
+$('.delivery__item').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+    $('.delivery__item').find('.reg-checkbox').attr('checked', false);
+    $(this).find('.reg-checkbox').attr('checked', true);
+})
+// Способы оплаты
+
+$('.payment__item').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+    $('.payment__item').find('.reg-checkbox').attr('checked', false);
+    $(this).find('.reg-checkbox').attr('checked', true);
+})
+
+

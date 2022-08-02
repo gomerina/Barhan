@@ -131,25 +131,118 @@
         </div>
     </div>
 </header>    <main>
-        <div class="about__inner">
-            <div class="about__head">
-                <h5>О НАС</h5>
-            </div>
-            <div class="about__body">
-                <span>Barhan</span>
-            </div>
-            <div class="about__text">
-                <p class="about__descr"><span class="about-bold">BARHAN</span> – это современный интернет магазин для
-                    мужчин и женщин всех возрастов. Мы
-                    существуем, чтобы сводить вместе человека и моду.
-                    Наша цель создать конкурентно способную платформу для роскошной моды, которая сочетает в себе
-                    создателей, посредников и потребителей. Осуществляя доставку по всей России, и работая с каждым
-                    брендом индивидуально, мы стремимся чтобы каждый покупатель нашел свой собственный, неповторимый
-                    стиль.</p>
-                <p class="about__descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis mollitia
-                    ipsa sequi. Nam possimus ab dolores rerum soluta. Facilis, tempore? Quos pariatur beatae quo quaerat
-                    possimus ipsa facere in vitae.</p>
-            </div>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="#" class="breadcrumb__link">Главная</a>
+                <a href="#" class="breadcrumb__link">Мой кабинет</a>
+                <a href="#" class="breadcrumb__link current">Оформление заказа</a>
+            </nav>
+            <form action="#">
+                <div class="reg__steps-indicator">
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot"></div>
+                        <div class="step-indicator__text">1. Оформление</div>
+                    </div>
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot current"></div>
+                        <div class="step-indicator__text current">2. Оплата</div>
+                    </div>
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot"></div>
+                        <div class="step-indicator__text">3. Контактные данные</div>
+                    </div>
+                </div>
+                <div class="reg__steps-inner">
+                    <div class="reg__steps">
+                        <div class="reg__step-heading">
+                            Оформление заказа
+                        </div>
+                        <div class="reg__step-subheading">
+                            Оплата
+                        </div>
+                        <div class="reg-group">
+                            <div class="payment-box">
+                                <div class="payment__item">
+                                    <div class="payment__item-box">
+                                        <div class="payment__img">
+                                            <img src="img/cash-img.png" alt="">
+                                        </div>
+                                        <span class="control control-checkbox">
+                                            <input type="checkbox" class="reg-checkbox" />
+                                            <span class="control_indicator"></span>
+                                        </span>
+                                    </div>
+                                    <div class="payment-text">Наличный расчет при получении</div>
+                                </div>
+                                <div class="payment__item">
+                                    <div class="payment__item-box">
+                                        <div class="payment__img">
+                                            <img src="img/e-card.png" alt="">
+                                        </div>
+                                        <span class="control control-checkbox">
+                                            <input type="checkbox" class="reg-checkbox" />
+                                            <span class="control_indicator"></span>
+                                        </span>
+                                    </div>
+                                    <div class="payment-text">Оплата картой при получении</div>
+                                </div>
+                                <div class="payment__item">
+                                    <div class="payment__item-box">
+                                        <div class="payment__img">
+                                            <img src="img/wallet.png" alt="">
+                                        </div>
+                                        <span class="control control-checkbox">
+                                            <input type="checkbox" class="reg-checkbox" />
+                                            <span class="control_indicator"></span>
+                                        </span>
+                                    </div>
+                                    <div class="payment-text">Безналичный расчет</div>
+                                </div>
+                                <div class="payment__item">
+                                    <div class="payment__item-box">
+                                        <div class="payment__img">
+                                            <img src="img/online-pay.png" alt="">
+                                        </div>
+                                        <span class="control control-checkbox">
+                                            <input type="checkbox" class="reg-checkbox" />
+                                            <span class="control_indicator"></span>
+                                        </span>
+                                    </div>
+                                    <div class="payment-text">Онлайн оплата на сайте</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-reg__links">
+                            <a href="#" class="control__link">Назад</a>
+                            <a href="#" class="control__link">Далее</a>
+                        </div>
+                    </div>
+                    <aside class="basket__sidebar">
+                        <div class="basket-aside__head">
+                            Ваша корзина
+                        </div>
+                        <div class="basket-calculation">
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Итого</span>
+                                <span class="calculation-value">32 000 ₽</span>
+                            </div>
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Доставка</span>
+                                <span class="calculation-value">500 ₽</span>
+                                <!--На тот случай, если доставка бесплатна-->
+                                <!--<span class="calculation-value__free">Бесплатно</span>-->
+                            </div>
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Всего</span>
+                                <span class="calculation-value">32 500 ₽</span>
+                            </div>
+                        </div>
+                        <div class="basket__sidebar-buttons">
+                            <!--<a href="#" class="button button-bg">Перейти к оформлению заказа</a>-->
+                        </div>
+                    </aside>
+                </div>
+            </form>
         </div>
     </main>
 <footer class="footer">
@@ -217,7 +310,8 @@
             </ul>
         </div>
     </div>
-</footer>    <script src="js/swiper.js"></script>
+</footer>    <div class="overlay"></div>
+    <script src="js/swiper.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/main.js"></script>
 </body>

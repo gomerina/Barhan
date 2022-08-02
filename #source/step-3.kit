@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--@import "header.html"-->
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="#" class="breadcrumb__link">Главная</a>
+                <a href="#" class="breadcrumb__link">Мой кабинет</a>
+                <a href="#" class="breadcrumb__link current">Оформление заказа</a>
+            </nav>
+            <form action="#">
+                <div class="reg__steps-indicator">
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot"></div>
+                        <div class="step-indicator__text">1. Оформление</div>
+                    </div>
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot"></div>
+                        <div class="step-indicator__text">2. Оплата</div>
+                    </div>
+                    <div class="step-indicator__item">
+                        <div class="step-indicator__dot current"></div>
+                        <div class="step-indicator__text current">3. Контактные данные</div>
+                    </div>
+                </div>
+                <div class="reg__steps-inner">
+                    <div class="reg__steps">
+                        <div class="reg__step-heading">
+                            Оформление заказа
+                        </div>
+                        <div class="reg__step-subheading">
+                            Контактные данные
+                        </div>
+                        <div class="reg-group">
+                            <div class="contacts__box">
+                                <div class="contacts__item">
+                                    <p class="contacts__item-text">ФИО*</p>
+                                    <input type="text" class="contact__input">
+                                </div>
+                                <div class="contacts__item">
+                                    <p class="contacts__item-text">Email*</p>
+                                    <input type="text" class="contact__input">
+                                </div>
+                                <div class="contacts__item">
+                                    <p class="contacts__item-text">Телефон*</p>
+                                    <input type="text" class="contact__input">
+                                </div>
+                                <div class="contacts__item">
+                                    <p class="contacts__item-text">Адрес</p>
+                                    <input type="text" class="contact__input">
+                                </div>
+                                <div class="contacts__item contacts__textarea">
+                                    <p class="contacts__item-text">Комментарий к заказу</p>
+                                    <textarea name="contact-textare" class="contact__textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-reg__links">
+                            <a href="#" class="control__link">Оформить заказ</a>
+                        </div>
+                    </div>
+                    <aside class="basket__sidebar">
+                        <div class="basket-aside__head">
+                            Ваша корзина
+                        </div>
+                        <div class="basket-calculation">
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Итого</span>
+                                <span class="calculation-value">32 000 ₽</span>
+                            </div>
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Доставка</span>
+                                <span class="calculation-value">500 ₽</span>
+                                <!--На тот случай, если доставка бесплатна-->
+                                <!--<span class="calculation-value__free">Бесплатно</span>-->
+                            </div>
+                            <div class="basket-calculation__item">
+                                <span class="calculation-text">Всего</span>
+                                <span class="calculation-value">32 500 ₽</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--@import "footer.html"-->
+    <div class="overlay"></div>
+    <script src="js/swiper.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
