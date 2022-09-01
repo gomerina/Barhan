@@ -37,9 +37,15 @@
                     <div class="header__right-item search">
                         <img src="img/svg/search.svg" alt="" class="search__desctope-img">
                     </div>
-                    <a href="#" class="header__right-item user">
-                        <img src="img/svg/user.svg" alt="" class="user-img">
-                    </a>
+                    <div class="header__right-item">
+                        <button class="user__btn desctope"><img src="img/svg/user.svg" alt=""></button>
+                        <button class="user__btn mobile"><img src="img/svg/user-mobile.svg" alt=""></button>
+                    </div>
+                    <!--Показываем ссылку, когда пользователь зарегистрировался-->
+                    <!--<a href="#" class="header__right-item">
+                        <img src="img/svg/user.svg" alt="" class="user__img desctope">
+                        <img src="img/svg/user-mobile.svg" alt="" class="user__img mobile">
+                    </a>-->
                     <a href="#" class="header__right-item">
                         <img src="img/svg/favorite.svg" alt="" class="favorite__desctope-img">
                         <img src="img/svg/favorite-mobile.svg" alt="" class="favorite__mobile-img">
@@ -47,10 +53,6 @@
                     <a href="#" class="header__right-item basket">
                         <img src="img/svg/basket.svg" alt="" class="basket__desctope-img">
                         <img src="img/svg/basket-mobile.svg" alt="" class="basket__mobile-img">
-                        <!--<div class="basket__info">
-                            <div class="basket__info-name">1 товаров</div>
-                            <div class="basket__info-sum">66 793 руб.</div>
-                        </div>-->
                     </a>
                 </div>
             </div>
@@ -311,7 +313,26 @@
         </div>
     </div>
 </footer>    <div class="overlay"></div>
-    <script src="js/swiper.js"></script>
+<div class="modal registration-modal">
+    <div class="heading modal__heading">
+        Регистрация
+    </div>
+    <div class="close close-modal"></div>
+    <form action="#">
+        <div class="registration__item">
+            <p>Телефон*</p>
+            <input type="tel" class="modal-input">
+        </div>
+        <div class="registration__item">
+            <p>Пароль*</p>
+            <input type="password" class="modal-input">
+        </div>
+        <div class="registration__item form-btn__group">
+            <button class="button button-bg">Войти</button>
+            <button class="button button-bg reg-btn">Зарегистрироваться</button>
+        </div>
+    </form>
+</div>    <script src="js/swiper.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/main.js"></script>
 </body>

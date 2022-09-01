@@ -70,6 +70,24 @@ main {
     padding: 0;
 }
 
+.user__btn.desctope,
+.user__btn.mobile {
+    background: none;
+    transition: transform .3s linear;
+
+    &:hover img {
+        transform: scale(1.2);
+    }
+}
+
+.user__img.mobile {
+    display: none;
+}
+
+.user__btn.mobile {
+    display: none;
+}
+
 .index-header {
     padding: 37px 0;
     position: relative;
@@ -124,6 +142,7 @@ main {
     background: url(../img/svg/close.svg) no-repeat;
     background-size: 32px 32px;
     position: absolute;
+    cursor: pointer;
 }
 
 .close-search {
@@ -138,15 +157,18 @@ main {
     height: calc(100% - 127px);
     overflow: auto;
     padding: 20px 0;
+    display: none;
     z-index: 90;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s linear;
     background: #ffffff;
 
-    &.active {
-        opacity: 1;
-        visibility: visible;
+    &.designers {
+        position: static;
+        display: block;
+        padding: 0 0 100px 0;
+
+        & .alphabet {
+            margin: 0 0 37px 0;
+        }
     }
 }
 
@@ -268,7 +290,7 @@ main {
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
-    transition: .3s linear;
+    transition: transform .3s linear;
 
     &:hover {
         transform: scale(1.1);
@@ -315,7 +337,7 @@ main {
     position: fixed;
     width: 100%;
     top: 86px;
-    z-index: 103;
+    z-index: 102;
     background: #fff;
 }
 
@@ -369,7 +391,7 @@ main {
     }
 
     &:hover img {
-        transition: .3s linear;
+        transition: transform .3s linear;
         transform: scale(1.2);
     }
 
@@ -390,7 +412,7 @@ main {
     opacity: 0;
     visibility: hidden;
     z-index: 102;
-    transition: .6s linear;
+    transition: .3s linear;
 
     &.active {
         opacity: 1;
@@ -819,8 +841,10 @@ main {
 
 .popular__body {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 10.87%;
 }
 
 .popular__item {
@@ -932,6 +956,7 @@ main {
 
 .big-card__brand {
     margin: 0 0 6px 0;
+    color: #000;
 
     & h5 {
         font-family: 'Bebas Neue Bold';
@@ -1019,7 +1044,7 @@ main {
     margin: 0 0 7px 0;
 
     &.active {
-        border-width: 1px 1px 0 1px;
+        border-bottom: 1px solid transparent;
         border-radius: 3px 3px 0 0;
     }
 }
@@ -1032,15 +1057,16 @@ main {
     border: 1px solid #000000;
     border-width: 0 1px 1px 1px;
     border-radius: 0 0 3px 3px;
-    padding: 10px;
     z-index: 6;
     background: #fff;
 }
 
 .select-menu__item {
+    padding: 5px 10px;
+    text-align: left;
 
-    &:not(:last-child) {
-        margin: 0 0 10px 0;
+    &:hover {
+        background: #e5e5e5;
     }
 }
 
@@ -1055,9 +1081,7 @@ main {
     text-align: center;
 }
 
-.custom-select.active .select-menu {
-    display: block;
-}
+
 
 .select-menu__item.hidden {
     display: none;
@@ -1489,6 +1513,8 @@ main {
     padding: 0 20px 0 0;
     position: relative;
     z-index: 4;
+    min-width: 140px;
+    text-align: right;
 
     &:after {
         width: 16px;
@@ -1508,7 +1534,11 @@ main {
 .sort__select-menu {
     width: 100%;
     border: none;
-    padding: 10px 10px 10px 0;
+    padding: 10px 0px 0px 0;
+
+    & .select-menu__item {
+        text-align: right;
+    }
 }
 
 .products-value {
@@ -1617,6 +1647,7 @@ main {
 .filter {
     width: 191px;
     margin: 0 0 60px 0;
+    flex-shrink: 0;
 }
 
 .filter-menu__item {
@@ -1629,8 +1660,7 @@ main {
 
 .filter__item-heading {
     font-size: 17px;
-    margin: 0 0 23px 0;
-    padding: 0 20px 0 0;
+    padding: 0 20px 0px 0;
     position: relative;
     cursor: pointer;
 
@@ -1642,6 +1672,7 @@ main {
         position: absolute;
         right: 0;
         top: 4px;
+        transition: transform .3s linear;
     }
 
     &.active:after {
@@ -1650,11 +1681,12 @@ main {
 }
 
 .filter__item {
-    margin: 0 0 23px 0;
+    padding: 0 0 23px 0;
 }
 
 .filter-menu {
     display: none;
+    padding: 23px 0 0 0;
 
     &.active {
         display: block;
@@ -1663,6 +1695,10 @@ main {
 
 .filter-menu__link {
     color: #000000;
+
+    &.current {
+        font-weight: 700;
+    }
 }
 
 .catalog__cards {
@@ -1817,6 +1853,10 @@ main {
 
 .reg-group {
     margin: 0 0 30px 0;
+}
+
+.reg-btn {
+    width: 100%;
 }
 
 .reg-select {
@@ -2018,6 +2058,18 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap: 20px;
+
+    & .reg-select {
+        margin: 0;
+    }
+
+    & .time {
+        grid-column: span 2;
+    }
+
+    & .post-index {
+        grid-column: span 2;
+    }
 }
 
 .contact__input,
@@ -2046,6 +2098,7 @@ main {
     }
 }
 
+// Избранные
 .favorite__items-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2057,7 +2110,6 @@ main {
     }
 }
 
-// Избранные
 
 .into-basket__btn {
     margin: 5px 0 0 0;
@@ -2068,6 +2120,302 @@ main {
     font-size: 12px;
     color: #fff;
     background: #000000;
+}
+
+// Бренд
+
+.brand__inner {
+    display: flex;
+    gap: 14px;
+    margin: 70px 0 87px 0;
+    position: relative;
+}
+
+.brand-content {
+    display: flex;
+    gap: 39px;
+    margin: 0 0 25px 0;
+}
+
+
+
+.brand__img {
+    max-width: 351px;
+    flex-shrink: 0;
+    display: inline-block;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.brand__text {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    & .products-value {
+        margin-top: auto;
+    }
+}
+
+.brand__heading {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 18px 0;
+}
+
+.brand__descr {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0 20px 0;
+}
+
+.brand-products {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    padding: 52px 0 0 0;
+}
+
+.brand-product__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1.333fr);
+    grid-column-gap: 188px;
+    grid-row-gap: 65px;
+    height: 100%;
+}
+
+// Модальное окно
+
+.modal {
+    position: fixed;
+    z-index: 105;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+    padding: 25px;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.close-modal {
+    right: 8px;
+    top: 8px;
+}
+
+.modal__heading {
+    margin: 0 0 30px 0;
+}
+
+.modal-input {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.registration__item:not(:last-child) {
+    margin: 0 0 15px 0;
+}
+
+.registration__item:last-child {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.form-btn__group {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 25px;
+
+    & a {
+        color: #000;
+    }
+}
+
+.registration__item p {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+// Дизайнеры
+
+
+// scroll Top
+
+.scroll-top {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    z-index: 100;
+    right: 45px;
+    bottom: 45px;
+    background: #afa9a9 url(../img/svg/chevron-up.svg) no-repeat center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+// Личный кабинет
+.cabinet-heading {
+    margin: 63px 0px 81px 0;
+}
+
+.cabinet__inner {
+    display: flex;
+    gap: 218px;
+    padding: 0 0 100px 0;
+}
+
+.cabinet-aside {
+    font-size: 24px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.change-profile__btn,
+.cabinet-aside__exit {
+    font-weight: 500;
+    color: #222;
+    width: max-content;
+    background: none;
+}
+
+.change-profile__btn {
+    font-size: 16px;
+    color: #5E5C5C;
+}
+
+.cabinet-aside__item {
+    margin: 0 0 40px 0;
+}
+
+.cabinet-aside__exit {
+    font-size: 24px;
+    margin: 11px 0 0 0;
+}
+
+.cabinet-aside__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    & a {
+        color: #222;
+    }
+}
+
+.cabinet__field-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 0 15px 0;
+    align-items: center;
+
+    &.sex {
+        justify-content: flex-start;
+        column-gap: 119px;
+    }
+}
+
+.cabinet__fiel-text {
+    min-width: 131px;
+}
+
+// RADIO
+
+.control.radio {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control.radio input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator.radio {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+}
+
+.control.radio:hover input~.control_indicator.radio,
+.control.radio input:focus~.control_indicator.radio {
+    background: #cccccc;
+}
+
+.control.radio input:checked~.control_indicator.radio {
+    background: #222;
+}
+
+
+.control.radio input:disabled~.control_indicator.radio {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control_indicator.radio:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control.radio input:checked~.control_indicator.radio:after {
+    display: block;
+}
+
+.control-radio .control_indicator.radio {
+    border-radius: 50%;
+}
+
+.control-radio.radio .control_indicator.radio:after {
+    left: 7px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: background 250ms;
+}
+
+.control-radio.radio input:disabled~.control_indicator.radio:after {
+    background: #7b7b7b;
+}
+
+// END RADIO
+
+.profile__input {
+    max-width: 362px;
+    width: 100%;
+    height: 49px;
+    padding: 0 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.cabinet__fields {
+    max-width: 515px;
+    width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2088,6 +2436,28 @@ main {
 
     .actual__body {
         gap: 32px;
+    }
+
+
+
+    .brand-product__cards {
+        grid-column-gap: 85px;
+    }
+
+    .brand__descr {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .brand-content {
+        gap: 15px;
+    }
+
+    // Личный кабинет 
+    .cabinet__inner {
+        gap: 69px;
+        justify-content: space-between;
     }
 }
 
@@ -2119,6 +2489,13 @@ main {
     h6 {
         font-size: 24px;
         line-height: 30px;
+    }
+
+    .scroll-top {
+        width: 30px;
+        height: 30px;
+        right: 15px;
+        bottom: 15px;
     }
 
     .header__right-item:not(:last-child) {
@@ -2256,6 +2633,103 @@ main {
         grid-column: span 2;
     }
 
+    .brand-products .catalog__more-button {
+        grid-column: span 3;
+    }
+
+    .filter-mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        gap: 7px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .filter {
+        position: fixed;
+        top: 0;
+        left: -248px;
+        padding: 100px 0 20px 0;
+        margin: 0;
+        min-height: 100vh;
+        height: 100%;
+        overflow: auto;
+        transition: left .3s linear;
+        background: #fff;
+        z-index: 103;
+        width: 248px;
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    .filter__item {
+        margin: 0;
+        padding: 8px 0;
+        border: 1px solid #969393;
+        border-width: 1px 0 0 0;
+
+    }
+
+    .sort-select__box {
+        margin: 0 0 -17px 0;
+    }
+
+    .sort-select {
+        font-size: 13px;
+        min-width: 125px;
+
+        &:after {
+            top: 1px;
+        }
+
+        &.active::after {
+            top: 1px;
+        }
+    }
+
+    .filter__item-heading {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .filter-menu__item {
+        padding: 0 10px 0 30px;
+    }
+
+    .menu__checkbox {
+        padding: 0 10px 0 20px;
+    }
+
+    .filter-menu {
+        margin: 8px 0 0 0;
+    }
+
+    .filter__item-heading:after {
+        right: 8px;
+    }
+
+    .filter__item {
+        margin: 0;
+
+        &:last-child {
+            border-width: 1px 0 1px 0;
+        }
+    }
+
+    .catalog__cards {
+        margin: 35px 0 0 0;
+        gap: 20px;
+        padding: 0 0 50px 0;
+    }
+
+    .catalog__more-button {
+        margin: 40px 0 0 0;
+    }
+
     // Главная
     .main-menu__link {
         opacity: 1;
@@ -2273,6 +2747,19 @@ main {
         column-gap: 45px;
         row-gap: 80px;
     }
+
+    // Бренд
+    .brand-content {
+        margin: 30px 0;
+    }
+
+    .brand-product__cards {
+        grid-column-gap: 45px;
+    }
+
+    .brand-products {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2284,6 +2771,23 @@ main {
 
     main {
         padding: 84px 0 0 0;
+    }
+
+    // Личный кабинет
+    .cabinet__inner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cabinet__fields {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .profile__input {
+        max-width: 100%;
     }
 
     // Главная
@@ -2385,6 +2889,26 @@ main {
     .favorite__mobile-img,
     .basket__mobile-img {
         display: inline-block;
+    }
+
+    .user__btn.desctope {
+        display: none;
+    }
+
+    .user__img.desctope {
+        display: none;
+    }
+
+    .user__btn.mobile,
+    .user__img.mobile {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 
     .basket__info {
@@ -2506,11 +3030,11 @@ main {
         padding: 100px 0 20px 15px;
         width: 248px;
         z-index: 103;
-        transition: left .5s linear;
+        transition: left .3s linear;
 
         &.active {
             left: 0;
-            transition: left .5s linear;
+            transition: left .3s linear;
         }
     }
 
@@ -2536,6 +3060,7 @@ main {
     .header__bottom {
         border: none;
         padding: 0;
+        z-index: 104;
     }
 
     .header__bottom-mobile {
@@ -2626,6 +3151,11 @@ main {
         }
     }
 
+    .big-slider,
+    .vertical__slider {
+        height: auto;
+    }
+
     .product-card__img {
         align-items: center;
     }
@@ -2655,6 +3185,10 @@ main {
     .big-slider {
         width: 100%;
         margin: 0 0 30px 0;
+    }
+
+    .big-slider__item img {
+        max-height: 400px;
     }
 
     .big-card__info {
@@ -2703,6 +3237,7 @@ main {
     .fashion-img {
         position: static;
         margin: 0 auto 35px auto;
+        width: auto;
     }
 
     .fashion-slider {
@@ -2765,97 +3300,10 @@ main {
     }
 
     // Каталог
-    .filter-mobile {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        gap: 7px;
-        justify-content: flex-start;
-        align-items: center;
-    }
 
-    .catalog__cards {
-        margin: 35px 0 0 0;
-        gap: 20px;
-        padding: 0 0 50px 0;
-    }
 
-    .catalog__more-button {
-        margin: 40px 0 0 0;
-    }
 
-    .filter {
-        position: fixed;
-        top: 0;
-        left: -248px;
-        padding: 100px 0 20px 0;
-        margin: 0;
-        min-height: 100vh;
-        height: 100%;
-        overflow: auto;
-        transition: left .3s linear;
-        background: #fff;
-        z-index: 103;
-        width: 248px;
 
-        &.active {
-            left: 0;
-        }
-    }
-
-    .filter__item {
-        margin: 0;
-        padding: 8px 0;
-        border: 1px solid #969393;
-        border-width: 1px 0 0 0;
-
-    }
-
-    .sort-select__box {
-        margin: 0 0 -17px 0;
-    }
-
-    .sort-select {
-        font-size: 13px;
-
-        &:after {
-            top: 1px;
-        }
-
-        &.active::after {
-            top: 1px;
-        }
-    }
-
-    .filter__item-heading {
-        margin: 0;
-        padding: 0 20px;
-    }
-
-    .filter-menu__item {
-        padding: 0 10px 0 30px;
-    }
-
-    .menu__checkbox {
-        padding: 0 10px 0 20px;
-    }
-
-    .filter-menu {
-        margin: 8px 0 0 0;
-    }
-
-    .filter__item-heading:after {
-        right: 8px;
-    }
-
-    .filter__item {
-        margin: 0;
-
-        &:last-child {
-            border-width: 1px 0 1px 0;
-        }
-    }
 
     .product-card__favorite {
         width: 19px;
@@ -2889,6 +3337,19 @@ main {
 
     .step-indicator__text {
         font-size: 12px;
+    }
+
+    // Бредн
+    .brand-content {
+        flex-direction: column;
+    }
+
+    .brand__img {
+        max-width: 100%;
+    }
+
+    .brand__inner {
+        margin: 25px 0 50px 0;
     }
 }
 
@@ -2926,10 +3387,6 @@ main {
 
     // Большая карточка
 
-    .big-slider {
-        height: 400px;
-    }
-
     .about__body {
         font-size: 28px;
         min-height: 200px;
@@ -2939,6 +3396,8 @@ main {
     .actual__body {
         grid-template-columns: 4fr;
     }
+
+
 
     .actual__item-img {
         padding-top: 0;
@@ -2965,6 +3424,38 @@ main {
         grid-template-columns: repeat(2, 2fr);
         column-gap: 15px;
     }
+
+    // Бренд
+    .brand-product__cards {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .brand-products .catalog__more-button {
+        grid-column: span 2;
+    }
+
+    // Модальное окно
+    .modal {
+        max-width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        overflow: auto;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    // Оформление заказа
+    .contacts__box {
+        grid-template-columns: 4fr;
+    }
+
+    .contacts__textarea,
+    .contacts__box .time,
+    .contacts__box .post-index {
+        grid-column: auto;
+    }
 }
 
 @media screen and (max-width: 419px) {
@@ -2978,6 +3469,20 @@ main {
         background-size: 100% 100%;
     }
 
+    .banner-text h3 {
+        font-size: 20px;
+    }
+
+    // Личный кабинет
+    .cabinet__field-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .cabinet__fiel-text {
+        min-width: auto;
+    }
 
     // корзина 
     .basket__item {
@@ -3086,13 +3591,7 @@ main {
         left: -38px;
     }
 
-    .contacts__box {
-        grid-template-columns: 4fr;
-    }
 
-    .contacts__textarea {
-        grid-column: auto;
-    }
 
     .control__link {
         font-size: 12px;

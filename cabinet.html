@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -135,153 +134,54 @@
     </div>
 </header>    <main>
         <div class="container">
-            <div class="heading favorite__heading">
-                <h5>Избранное</h5>
+            <div class="heading cabinet-heading">
+                <h5>ЛИЧНЫЙ КАБИНЕТ</h5>
             </div>
-            <div class="favorite__items-box">
-                <div class="product-card__item">
-                    <div class="product-card__favorite liked"></div>
-                    <div class="product-card__img">
-                        <img src="img/favorite-1.jpg" alt="">
+            <div class="cabinet__inner">
+                <aside class="cabinet-aside">
+                    <div class="cabinet-aside__item">
+                        <p>+7 (977) 324-29-80</p>
+                        <button class="change-profile__btn">ИЗМЕНИТЬ ПРОФИЛЬ</button>
                     </div>
-                    <div class="product-card__info">
-                        <div class="product-card__brand">
-                            <h6>Jacquemus</h6>
+                    <nav class="cabinet-aside__navigation">
+                        <a href="#">МОИ ЗАКАЗЫ</a>
+                        <a href="#">АДРЕСА ДОСТАВКИ</a>
+                        <a href="#">РЕКЛАМНЫЕ РАССЫЛКИ</a>
+                    </nav>
+                    <button class="cabinet-aside__exit">ВЫЙТИ</button>
+                </aside>
+                <div class="cabinet__fields">
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Телефон</span>
+                        <input type="tel" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Email</span>
+                        <input type="text" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">ФИО</span>
+                        <input type="text" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item sex">
+                        <span>Пол</span>
+                        <div class="profile-radio">
+                            <label class="control control-radio radio">
+                                Женский
+                                <input type="radio" name="radio" checked="checked" />
+                                <span class="control_indicator radio"></span>
+                            </label>
+                            <label class="control control-radio radio">
+                                Мужской
+                                <input type="radio" name="radio" />
+                                <span class="control_indicator radio"></span>
+                            </label>
                         </div>
-                        <p class="product-card__name">Желтое платье
-                            La robe Sorbetto</p>
-                        <p class="product-card__price">72 000</p>
-                        <button class="into-basket__btn">В корзину</button>
                     </div>
-                </div>
-                <div class="product-card__item">
-                    <div class="product-card__favorite liked"></div>
-                    <div class="product-card__img">
-                        <img src="img/favorite-1.jpg" alt="">
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Дата рождения</span>
+                        <input type="date" class="profile__input">
                     </div>
-                    <div class="product-card__info">
-                        <div class="product-card__brand">
-                            <h6>Jacquemus</h6>
-                        </div>
-                        <p class="product-card__name">Желтое платье
-                            La robe Sorbetto</p>
-                        <p class="product-card__price">72 000</p>
-                        <button class="into-basket__btn">В корзину</button>
-                    </div>
-                </div>
-                <div class="product-card__item">
-                    <div class="product-card__favorite liked"></div>
-                    <div class="product-card__img">
-                        <img src="img/favorite-1.jpg" alt="">
-                    </div>
-                    <div class="product-card__info">
-                        <div class="product-card__brand">
-                            <h6>Jacquemus</h6>
-                        </div>
-                        <p class="product-card__name">Желтое платье
-                            La robe Sorbetto</p>
-                        <p class="product-card__price">72 000</p>
-                        <button class="into-basket__btn">В корзину</button>
-                    </div>
-                </div>
-                <div class="product-card__item">
-                    <div class="product-card__favorite liked"></div>
-                    <div class="product-card__img">
-                        <img src="img/favorite-1.jpg" alt="">
-                    </div>
-                    <div class="product-card__info">
-                        <div class="product-card__brand">
-                            <h6>Jacquemus</h6>
-                        </div>
-                        <p class="product-card__name">Желтое платье
-                            La robe Sorbetto</p>
-                        <p class="product-card__price">72 000</p>
-                        <button class="into-basket__btn">В корзину</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-cards">
-                <div class="heading product-cards__head--basket">
-                    <h5>Рекомендации</h5>
-                </div>
-                <div class="product-cards__body swiper">
-                    <div class="swiper-wrapper">
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-1.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Sandro</h6>
-                                </div>
-                                <p class="product-card__name">Худи с логотипом</p>
-                                <p class="product-card__price">23 120</p>
-                            </div>
-                        </a>
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-2.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Gucci</h6>
-                                </div>
-                                <p class="product-card__name">Куртка</p>
-                                <p class="product-card__price">107 700</p>
-                            </div>
-                        </a>
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-3.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Jordan & Travis Scott</h6>
-                                </div>
-                                <p class="product-card__name">брюки</p>
-                                <p class="product-card__price">27 000</p>
-                            </div>
-                        </a>
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-4.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Nike</h6>
-                                </div>
-                                <p class="product-card__name">Кроссовки</p>
-                                <p class="product-card__price">39 000</p>
-                            </div>
-                        </a>
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-5.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Evgeny Ches</h6>
-                                </div>
-                                <p class="product-card__name">Чехол</p>
-                                <p class="product-card__price">3 500</p>
-                            </div>
-                        </a>
-                        <a href="#" class="product-card__item swiper-slide">
-                            <div class="product-card__img">
-                                <img src="img/basket-5.jpg" alt="">
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">
-                                    <h6>Evgeny Ches</h6>
-                                </div>
-                                <p class="product-card__name">Чехол</p>
-                                <p class="product-card__price">3 500</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -352,26 +252,7 @@
         </div>
     </div>
 </footer>    <div class="overlay"></div>
-<div class="modal registration-modal">
-    <div class="heading modal__heading">
-        Регистрация
-    </div>
-    <div class="close close-modal"></div>
-    <form action="#">
-        <div class="registration__item">
-            <p>Телефон*</p>
-            <input type="tel" class="modal-input">
-        </div>
-        <div class="registration__item">
-            <p>Пароль*</p>
-            <input type="password" class="modal-input">
-        </div>
-        <div class="registration__item form-btn__group">
-            <button class="button button-bg">Войти</button>
-            <button class="button button-bg reg-btn">Зарегистрироваться</button>
-        </div>
-    </form>
-</div>    <script src="js/swiper.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -91,3 +91,8 @@ ul li {
 iframe {
   width: 100%;
 }
+
+input:-webkit-autofill {
+  background: #ffffff;
+  transition: 10000000000s linear;
+}

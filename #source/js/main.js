@@ -5,6 +5,7 @@ var verticalSlider = new Swiper(".vertical__slider", {
     slidesPerView: 3,
     watchSlidesProgress: true,
     direction: "vertical",
+    grabCursor: true,
     pagination: {
         el: ".swiper-pagination",
     },
@@ -12,6 +13,7 @@ var verticalSlider = new Swiper(".vertical__slider", {
 // Горизонтальный
 var bigSlider = new Swiper(".big-slider", {
     spaceBetween: 0,
+    autoHeight: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -23,6 +25,14 @@ var bigSlider = new Swiper(".big-slider", {
         el: ".swiper-pagination",
         clickable: true,
     },
+    breakpoints: {
+        280: {
+            autoHeight: true,
+        },
+        768: {
+            autoHeight: false,
+        },
+    }
 });
 // Слайдеры карточек товара в секции по 5шт
 const sliders = document.querySelectorAll('.product-cards__body');
@@ -149,6 +159,7 @@ $('.custom-select').each(function () {
     $(this).click(function (e) {
         e.stopPropagation();
         $(this).toggleClass('active').siblings().removeClass('active');
+        $(this).find('.select-menu').slideToggle();
     })
     $(this).find('.select-menu__item').click(function () {
         $(this).closest('.custom-select').find('.custom-select__value').html($(this).html());
@@ -185,30 +196,33 @@ $('.burger').click(function () {
     $('.header__bottom-nav').addClass('active');
     $('.overlay').addClass('active');
 })
+// Оверлей
 $('.overlay').click(function () {
     $('.header__bottom-nav').removeClass('active');
     $('.filter').removeClass('active');
     $(this).removeClass('active');
+    $('.modal').fadeOut(300);
 })
 // Поиск
 
 $('.search').click(function () {
-    $('.search__box').toggleClass('active');
+    $('.search__box').fadeToggle(300);
 })
+
 $('.mobile-search').click(function () {
-    $('.search__box').toggleClass('active');
+    $('.search__box').fadeToggle(300);
 })
 $('.alphabet__item').click(function () {
     $(this).addClass('current').siblings().removeClass('current');
 })
 $('.close-search').click(function () {
-    $('.search__box').removeClass('active');
+    $('.search__box').fadeToggle(300);
 })
 // Фильтр
 
 $('.filter__item').each(function () {
     $(this).find('.filter__item-heading').click(function () {
-        $(this).next('.filter-menu').toggleClass('active');
+        $(this).next('.filter-menu').slideToggle();
         $(this).toggleClass('active');
     })
 })
@@ -233,6 +247,56 @@ $('.payment__item').click(function () {
     $(this).addClass('active').siblings().removeClass('active')
     $('.payment__item').find('.reg-checkbox').attr('checked', false);
     $(this).find('.reg-checkbox').attr('checked', true);
+})
+
+// Модальное окно регистрации 
+const scrollY = document.body.style.top;
+$('.user__btn').click(function () {
+    $('.registration-modal').fadeIn(300);
+    $('.overlay').addClass('active');
+})
+// Закрыть модальное окно
+$('.close-modal').click(function () {
+    $('.modal').fadeOut(300);
+    $('.overlay').removeClass('active');
+})
+// Маска на инпут телефона
+window.addEventListener("DOMContentLoaded", function () {
+    [].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
+        var keyCode;
+        function mask(event) {
+            event.keyCode && (keyCode = event.keyCode);
+            var pos = this.selectionStart;
+            if (pos < 3) event.preventDefault();
+            var matrix = "+7 (___) ___-__-__",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, ""),
+                new_value = matrix.replace(/[_\d]/g, function (a) {
+                    return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+                });
+            i = new_value.indexOf("_");
+            if (i != -1) {
+                i < 5 && (i = 3);
+                new_value = new_value.slice(0, i)
+            }
+            var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                function (a) {
+                    return "\\d{1," + a.length + "}"
+                }).replace(/[+()]/g, "\\$&");
+            reg = new RegExp("^" + reg + "$");
+            if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+            if (event.type == "blur" && this.value.length < 5) this.value = ""
+        }
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, false);
+        input.addEventListener("keydown", mask, false)
+    });
+});
+// Скролл страницы вверх
+$('.scroll-top').click(function () {
+    $('body,html').animate({ scrollTop: 0 }, 400);
 })
 
 

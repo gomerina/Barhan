@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--@import "header.html"-->
+    <main>
+        <div class="container">
+            <div class="heading cabinet-heading">
+                <h5>ЛИЧНЫЙ КАБИНЕТ</h5>
+            </div>
+            <div class="cabinet__inner">
+                <aside class="cabinet-aside">
+                    <div class="cabinet-aside__item">
+                        <p>+7 (977) 324-29-80</p>
+                        <button class="change-profile__btn">ИЗМЕНИТЬ ПРОФИЛЬ</button>
+                    </div>
+                    <nav class="cabinet-aside__navigation">
+                        <a href="#">МОИ ЗАКАЗЫ</a>
+                        <a href="#">АДРЕСА ДОСТАВКИ</a>
+                        <a href="#">РЕКЛАМНЫЕ РАССЫЛКИ</a>
+                    </nav>
+                    <button class="cabinet-aside__exit">ВЫЙТИ</button>
+                </aside>
+                <div class="cabinet__fields">
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Телефон</span>
+                        <input type="tel" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Email</span>
+                        <input type="text" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">ФИО</span>
+                        <input type="text" class="profile__input">
+                    </div>
+                    <div class="cabinet__field-item sex">
+                        <span>Пол</span>
+                        <div class="profile-radio">
+                            <label class="control control-radio radio">
+                                Женский
+                                <input type="radio" name="radio" checked="checked" />
+                                <span class="control_indicator radio"></span>
+                            </label>
+                            <label class="control control-radio radio">
+                                Мужской
+                                <input type="radio" name="radio" />
+                                <span class="control_indicator radio"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cabinet__field-item">
+                        <span class="cabinet__fiel-text">Дата рождения</span>
+                        <input type="date" class="profile__input">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--@import "footer.html"-->
+    <div class="overlay"></div>
+    <script src="js/swiper.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -22,9 +22,15 @@
                 <div class="header__right-item search">
                     <img src="img/svg/search.svg" alt="">
                 </div>
-                <a href="#" class="header__right-item">
-                    <img src="img/svg/user.svg" alt="">
-                </a>
+                <div class="header__right-item">
+                    <button class="user__btn desctope"><img src="img/svg/user.svg" alt=""></button>
+                    <button class="user__btn mobile"><img src="img/svg/user-mobile.svg" alt=""></button>
+                </div>
+                <!--Показываем ссылку, когда пользователь зарегистрировался-->
+                <!--<a href="#" class="header__right-item">
+                        <img src="img/svg/user.svg" alt="" class="user__img desctope">
+                        <img src="img/svg/user-mobile.svg" alt="" class="user__img mobile">
+                    </a>-->
                 <a href="#" class="header__right-item">
                     <img src="img/svg/favorite.svg" alt="">
                 </a>
@@ -139,6 +145,8 @@
     <div class="main-footer">
         <!--@import "footer.html"-->
     </div>
+    <div class="overlay"></div>
+    <!--@import "registration-modal.html"-->
     <script src="js/swiper.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/main.js"></script>
